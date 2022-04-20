@@ -1,6 +1,6 @@
 use anchor_lang::prelude::*;
 
-declare_id!("Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS");
+declare_id!("DsvhEL6cuoSZaDnUxvSx1FEpfPS9MAAhtKfJpc6xWQY1");
 
 #[program]
 pub mod firstsolanaproject {
@@ -13,7 +13,7 @@ pub mod firstsolanaproject {
         Ok(())
     }
 
-    pub fn add_gif(_ctx: Context<AddGif>) -> Result<()> {
+    pub fn add_gif(_ctx: Context<AddGif>, gif_link: String) -> Result<()> {
         let base_account = &mut _ctx.accounts.base_account;
         let user = &mut _ctx.accounts.user;
         
